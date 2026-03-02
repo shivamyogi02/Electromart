@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 font-sans transition-colors duration-300;
+}
+
+.dark body {
+  @apply from-gray-900 to-gray-800 to-black;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-400 rounded-full;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
